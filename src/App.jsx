@@ -1,8 +1,18 @@
 import React from 'react'
+import { BrowserRouter } from 'react-router-dom'
 
 export default function App() {
   return (
-    <h1 className='text-red-500'>App</h1>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/sign-up" element={<Signup />} />
+        <Route path="/sign-in" element={<Signup />} />
+
+      </Routes>
+    </BrowserRouter>
   )
 }
 
